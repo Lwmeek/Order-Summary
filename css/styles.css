@@ -1,6 +1,148 @@
-html{
-    font-size: 62%;
+:root {
+	--clr-pale-blue: hsl(225, 100%, 94%);
+	--clr-bright-blue: hsl(245, 75%, 52%);
+	--clr-vpale-blue: hsl(225, 100%, 98%);
+	--clr-des-blue: hsl(224, 23%, 55%);
+	--clr-dark-blue: hsl(223, 47%, 23%);
+	--clr-hover-blue: hsl(245, 96%, 70%);
 }
-body{
-    font-size: 1.5rem;
+
+html {
+	font-size: 62%;
+}
+body {
+	font-size: 1.6rem;
+	font-family: "Red Hat Display", sans-serif;
+	display: flex;
+	color: var(--clr-des-blue);
+	background: var(--clr-pale-blue);
+	height: 100vh;
+}
+.bg-img {
+	background-image: url(/images/pattern-background-desktop.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	height: 60vh;
+}
+.card {
+	border-radius: 20px;
+	width: 500px;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	background: white;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 10px 20px -5px var(--clr-des-blue);
+}
+.card-header img {
+	width: 100%;
+}
+.card-summary h1 {
+	margin-top: 5rem;
+	color: black;
+}
+.card-summary p {
+	max-width: 28ch;
+	margin: auto;
+	margin-bottom: 2rem;
+}
+.card-plan {
+	display: flex;
+	width: 80%;
+	margin: 3rem auto;
+	align-items: center;
+	background: var(--clr-vpale-blue);
+	border-radius: 10px;
+	justify-content: space-between;
+}
+.card-pricing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-pricing img {
+	width: 5rem;
+	height: 5rem;
+	margin: 2rem 0 2rem 2rem;
+}
+.card-plan img {
+	margin-right: 2rem;
+}
+.card-plan h2 {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+	color: black;
+}
+.card-plan p {
+	margin-top: 0.7rem;
+}
+.card-plan a {
+	margin-left: 10rem;
+	font-weight: 700;
+	color: var(--clr-bright-blue);
+}
+.btn {
+	font-size: 1.4rem;
+	font-weight: bold;
+	border: none;
+}
+.btn-change {
+	color: var(--clr-bright-blue);
+	background: transparent;
+	text-decoration: underline;
+	margin-right: 2rem;
+	transition: all 0.3s;
+}
+.btn-payment {
+	box-shadow: 0 10px 12px 7px var(--clr-pale-blue);
+	border-radius: 10px;
+	background: var(--clr-bright-blue);
+	color: white;
+	width: 80%;
+	margin-bottom: 2rem;
+	transition: all 0.2s;
+}
+.btn-cancel {
+	margin-bottom: 4rem;
+	transition: all 0.3s;
+}
+.btn-change:hover {
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--clr-hover-blue);
+}
+.btn-payment:hover {
+	background: var(--clr-hover-blue);
+	cursor: pointer;
+}
+.btn-cancel:hover {
+	color: black;
+	cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+	.card {
+		width: 90vw;
+	}
+	.card-summary p {
+		width: 26ch;
+		line-height: 3rem;
+	}
+	.btn-cancel {
+		font-size: 2rem;
+	}
+	.btn-change {
+		font-size: 1.5rem;
+	}
+	.bg-img {
+		background-image: url(/images/pattern-background-mobile.svg);
+		height: 45vh;
+	}
 }
